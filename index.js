@@ -65,11 +65,7 @@ function processLength(list, callback) {
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
 */
-function processLastItem(stringList, callback) {
-	const lastElement = stringList.map((item) => {
-		return callback(item.last);
-	});
-}
+function processLastItem(stringList, callback) {}
 
 /**
  * ### Challenge `processSum`
@@ -90,7 +86,7 @@ function processLastItem(stringList, callback) {
 */
 
 function processSum(numberList, callback) {
-	return numberList + callback;
+	let sum = numberList;
 }
 
 /**
@@ -111,8 +107,8 @@ function processSum(numberList, callback) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
-	/* CODE HERE */
+function processProduct(num1, num2, callback) {
+	return callback(num1 * num2);
 }
 
 /**
