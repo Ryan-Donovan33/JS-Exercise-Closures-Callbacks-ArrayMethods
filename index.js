@@ -86,8 +86,15 @@ function processLastItem(stringList, callback) {}
 */
 
 function processSum(numberList, callback) {
-	let sum = numberList;
+	let sum = [];
+	return callback(numberList.reduce(addNums));
 }
+
+function addNums(a, b) {
+	return a + b;
+}
+
+addNums.push(sum);
 
 /**
  * ### Challenge `processProduct`
