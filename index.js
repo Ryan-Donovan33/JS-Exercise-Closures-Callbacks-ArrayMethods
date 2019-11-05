@@ -67,34 +67,34 @@ function processLength(list, callback) {
 */
 function processLastItem(stringList, callback) {}
 
-/**
- * ### Challenge `processSum`
- * 
- * @instructions
- * Implement a higher-order function called `processSum`.
- * It takes two arguments:
- * @param numberList array of numbers.
- * @param callback function that takes a number as its argument.
- * @returns the result of invoking `callback` passing the SUM of all elements in `numberList`.
- * 
- * Examples of usage of this higher-order function:
- * [1] Invoking `processSum` passing `[10, 20, 30]` and `(num) => num + " is a big number!"`,
- * should return "60 is a big number!".
- * 
- * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
- * should return 1000.
-*/
+// /**
+//  * ### Challenge `processSum`
+//  *
+//  * @instructions
+//  * Implement a higher-order function called `processSum`.
+//  * It takes two arguments:
+//  * @param numberList array of numbers.
+//  * @param callback function that takes a number as its argument.
+//  * @returns the result of invoking `callback` passing the SUM of all elements in `numberList`.
+//  *
+//  * Examples of usage of this higher-order function:
+//  * [1] Invoking `processSum` passing `[10, 20, 30]` and `(num) => num + " is a big number!"`,
+//  * should return "60 is a big number!".
+//  *
+//  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
+//  * should return 1000.
+// */
 
-function processSum(numberList, callback) {
-	let sum = [];
-	return callback(numberList.reduce(addNums));
-}
+// function processSum(numberList, callback) {
+// 	let sum = [];
+// 	return callback(numberList.reduce(addNums));
+// }
 
-function addNums(a, b) {
-	return a + b;
-}
+// function addNums(a, b) {
+// 	return a + b;
+// }
 
-addNums.push(sum);
+// addNums.push(sum);
 
 /**
  * ### Challenge `processProduct`
@@ -183,10 +183,16 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-	/* CODE HERE */
+function getFullNames(runners, cb) {
+	const runnersNameArray = runners.map(cb);
+	return runnersNameArray;
 }
 
+const nameCallBack = (runner) => {
+	return `${runner.last_name}, ${runner.first_name}`;
+};
+
+console.log(getFullNames(runners, nameCallBack));
 /**
  * ### Challenge `firstNamesAllCaps`
  * 
