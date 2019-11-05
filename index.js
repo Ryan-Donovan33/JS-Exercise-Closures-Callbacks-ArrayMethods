@@ -70,34 +70,31 @@ function processLastItem(stringList, callback) {
 	return callback(lastItem);
 }
 
-// /**
-//  * ### Challenge `processSum`
-//  *
-//  * @instructions
-//  * Implement a higher-order function called `processSum`.
-//  * It takes two arguments:
-//  * @param numberList array of numbers.
-//  * @param callback function that takes a number as its argument.
-//  * @returns the result of invoking `callback` passing the SUM of all elements in `numberList`.
-//  *
-//  * Examples of usage of this higher-order function:
-//  * [1] Invoking `processSum` passing `[10, 20, 30]` and `(num) => num + " is a big number!"`,
-//  * should return "60 is a big number!".
-//  *
-//  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
-//  * should return 1000.
-// */
+/**
+ * ### Challenge `processSum`
+ *
+ * @instructions
+ * Implement a higher-order function called `processSum`.
+ * It takes two arguments:
+ * @param numberList array of numbers.
+ * @param callback function that takes a number as its argument.
+ * @returns the result of invoking `callback` passing the SUM of all elements in `numberList`.
+ *
+ * Examples of usage of this higher-order function:
+ * [1] Invoking `processSum` passing `[10, 20, 30]` and `(num) => num + " is a big number!"`,
+ * should return "60 is a big number!".
+ *
+ * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
+ * should return 1000.
+*/
 
-// function processSum(numberList, callback) {
-// 	let sum = [];
-// 	return callback(numberList.reduce(addNums));
-// }
+function processSum(numberList, callback) {
+	return callback(numberList.reduce(sumItem));
+}
 
-// function addNums(a, b) {
-// 	return a + b;
-// }
-
-// addNums.push(sum);
+function sumItem(a, b) {
+	return a + b;
+}
 
 /**
  * ### Challenge `processProduct`
