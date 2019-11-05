@@ -183,6 +183,8 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
+
+// Example
 function getFullNames(runners, cb) {
 	const runnersNameArray = runners.map(cb);
 	return runnersNameArray;
@@ -193,6 +195,17 @@ const nameCallBack = (runner) => {
 };
 
 console.log(getFullNames(runners, nameCallBack));
+
+// Example 2
+
+// function getFullNames(runners) {
+// 	let fullNames = [];
+// 	runners.forEach((runner) => {
+// 	  fullNames.push (`${runner.last_name}, ${runner.first_name}`);
+// 	});
+// 	return FullNames;
+//   }
+
 /**
  * ### Challenge `firstNamesAllCaps`
  * 
