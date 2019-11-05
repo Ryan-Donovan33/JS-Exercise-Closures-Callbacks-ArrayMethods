@@ -138,9 +138,7 @@ function processProduct(num1, num2, callback) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
-	/* CODE HERE */
-}
+function processContains(item, list, callback) {}
 
 /**
  * ### Challenge `processDuplicateFree`
@@ -216,9 +214,12 @@ const nameCallBack = (runner) => {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
-	/* CODE HERE */
+function firstNamesAllCaps(runners) {
+	const upperCaseRunner = [];
+	return runners.map(first_name.toUppercase);
 }
+
+return upperCaseRunner.push(runners);
 
 /**
  * ### Challenge `getRunnersByTShirtSize`
@@ -233,8 +234,12 @@ function firstNamesAllCaps(/* CODE HERE */) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
-	/* CODE HERE */
+function getRunnersByTShirtSize(runners, shirt_size) {
+	const tShirtSize = runners.filter(function(runner) {
+		console.log(runner);
+		return runners.shirt_size === shirt_size;
+	});
+	return tShirtSize;
 }
 
 /**
