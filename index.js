@@ -65,7 +65,10 @@ function processLength(list, callback) {
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
 */
-function processLastItem(stringList, callback) {}
+function processLastItem(stringList, callback) {
+	const lastItem = stringList[stringList.length - 1];
+	return callback(lastItem);
+}
 
 // /**
 //  * ### Challenge `processSum`
@@ -193,8 +196,6 @@ function getFullNames(runners, cb) {
 const nameCallBack = (runner) => {
 	return `${runner.last_name}, ${runner.first_name}`;
 };
-
-console.log(getFullNames(runners, nameCallBack));
 
 // Example 2
 
