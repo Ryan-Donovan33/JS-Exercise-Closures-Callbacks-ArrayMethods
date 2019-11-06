@@ -215,11 +215,11 @@ const nameCallBack = (runner) => {
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
 function firstNamesAllCaps(runners) {
-	const upperCaseRunner = [];
-	return runners.map(first_name.toUppercase);
+	const firstNames = runners.map((runner) => {
+		return runner.first_name.toUppercase();
+	});
+	return firstNames;
 }
-
-return upperCaseRunner.push(runners);
 
 /**
  * ### Challenge `getRunnersByTShirtSize`
